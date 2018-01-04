@@ -6,7 +6,7 @@
   "author": "ncphillips",
   "license": "MIT",
   "bin": {
-    "create-typescript-package/build": "scripts/build.js"
+    "create-typescript-package-build": "scripts/build.js"
   },
   "scripts": {
     "build": "node scripts/build.js"
