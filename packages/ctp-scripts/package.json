@@ -6,9 +6,10 @@
   "author": "ncphillips",
   "license": "MIT",
   "scripts": {
-    "build": "node packages/ctp-scripts/scripts/build.js"
+    "build": "node scripts/build.js"
   },
-  "devDependencies": {
-    "prettier": "^1.9.2"
+  "dependencies": {
+    "rollup": "^0.53.3",
+    "rollup-plugin-typescript": "^0.8.1"
   }
 }
