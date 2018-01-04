@@ -12,7 +12,9 @@ const inputOptions = {
   input: "src/index.ts",
   external,
   plugins: [
-    rollupTypescript(),
+    rollupTypescript({
+      typescript: require("typescript"),
+    }),
     resolve({
       customResolveOptions: {
         moduleDirectory: path.resolve(__dirname, "../.."),
