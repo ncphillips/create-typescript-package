@@ -10,7 +10,10 @@ const external = Object.keys(package.peerDependencies || {})
 
 const typescript = require(path.resolve(__dirname, "../../typescript"))
 
-console.log("Building With Typescript", typescript.version)
+console.log("Creact Typescript Package – Build")
+console.log("\tTypescript Version: ", typescript.version)
+console.log("\tPackage Name: ", package.name)
+console.log("\tExternal Dependencies: ", external)
 
 const inputOptions = {
   input: "src/index.ts",
