@@ -1,14 +1,16 @@
 #! /usr/bin/env node
-
 const path = require("path")
 const rollupTypescript = require("rollup-plugin-typescript")
-const package = require("../package.json")
 const rollup = require("rollup")
 const resolve = require("rollup-plugin-node-resolve")
 
+const PROJECT = "../../../"
+const NODE_MODULES = "../../"
+
+const package = require(path.resolve(PROJECT, "package.json"))
 const external = Object.keys(package.peerDependencies || {})
 
-const typescript = require(path.resolve(__dirname, "../../typescript"))
+const typescript = require(path.resolve(__dirname, NODE_MODULES, "typescript"))
 
 console.log("Creact Typescript Package – Build")
 console.log("\tTypescript Version: ", typescript.version)
@@ -24,7 +26,7 @@ const inputOptions = {
     }),
     resolve({
       customResolveOptions: {
-        moduleDirectory: path.resolve(__dirname, "../.."),
+        moduleDirectory: path.resolve(__dirname, NODE_MODULES),
       },
     }),
   ],
