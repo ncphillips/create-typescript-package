@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "rollup": "^0.53.3",
+    "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-typescript": "^0.8.1"
   },
   "devDependencies": {

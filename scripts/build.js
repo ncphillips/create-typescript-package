@@ -4,10 +4,21 @@ const path = require("path")
 const rollupTypescript = require("rollup-plugin-typescript")
 const package = require("../package.json")
 const rollup = require("rollup")
+const resolve = require("rollup-plugin-node-resolve")
+
+const external = Object.keys(package.peerDependencies || {})
 
 const inputOptions = {
   input: "src/index.ts",
-  plugins: [rollupTypescript()],
+  external,
+  plugins: [
+    rollupTypescript(),
+    resolve({
+      customResolveOptions: {
+        moduleDirectory: "node_modules",
+      },
+    }),
+  ],
 }
 
 const outputOptions = {
