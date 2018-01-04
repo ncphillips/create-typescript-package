@@ -5,8 +5,15 @@
   "main": "index.js",
   "author": "ncphillips",
   "license": "MIT",
+  "bin": {
+    "create-typescript-package/build": "scripts/build"
+  },
   "scripts": {
-    "build": "node packages/ctp-scripts/scripts/build.js"
+    "build": "node scripts/build.js"
+  },
+  "dependencies": {
+    "rollup": "^0.53.3",
+    "rollup-plugin-typescript": "^0.8.1"
   },
   "devDependencies": {
     "prettier": "^1.9.2"
