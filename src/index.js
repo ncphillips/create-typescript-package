@@ -1,5 +1,5 @@
-import { foo } from "./foo";
+import { foo } from "./foo"
 
 export default function() {
-  console.log(foo);
+  console.log(foo)
 }
