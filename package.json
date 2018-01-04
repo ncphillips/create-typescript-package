@@ -1,0 +1,8 @@
+{
+  "name": "create-typescript-package",
+  "version": "0.1.0",
+  "description": "Create Typescript packages for NPM with no build scripts.",
+  "main": "index.js",
+  "author": "ncphillips",
+  "license": "MIT"
+}
