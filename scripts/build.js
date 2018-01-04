@@ -15,7 +15,7 @@ const inputOptions = {
     rollupTypescript(),
     resolve({
       customResolveOptions: {
-        moduleDirectory: "node_modules",
+        moduleDirectory: path.resolve(__dirname, "../.."),
       },
     }),
   ],
