@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 const path = require("path")
 const rollupTypescript = require("rollup-plugin-typescript")
 const package = require("../package.json")
