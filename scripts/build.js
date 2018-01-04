@@ -8,12 +8,16 @@ const resolve = require("rollup-plugin-node-resolve")
 
 const external = Object.keys(package.peerDependencies || {})
 
+const typescript = require("typescript")
+
+console.log("Building With Typescript", typescript.version)
+
 const inputOptions = {
   input: "src/index.ts",
   external,
   plugins: [
     rollupTypescript({
-      typescript: require("typescript"),
+      typescript,
     }),
     resolve({
       customResolveOptions: {
