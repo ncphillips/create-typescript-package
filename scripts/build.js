@@ -8,7 +8,7 @@ const resolve = require("rollup-plugin-node-resolve")
 
 const external = Object.keys(package.peerDependencies || {})
 
-const typescript = require("typescript")
+const typescript = require(path.resolve(__dirname, "../../typescript"))
 
 console.log("Building With Typescript", typescript.version)
 
