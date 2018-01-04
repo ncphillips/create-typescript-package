@@ -7,7 +7,7 @@ const resolve = require("rollup-plugin-node-resolve")
 const PROJECT = "../../../"
 const NODE_MODULES = "../../"
 
-const package = require(path.resolve(PROJECT, "package.json"))
+const package = require(path.resolve(__dirname, PROJECT, "package.json"))
 const external = Object.keys(package.peerDependencies || {})
 
 const typescript = require(path.resolve(__dirname, NODE_MODULES, "typescript"))
