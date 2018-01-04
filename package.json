@@ -18,5 +18,8 @@
   },
   "devDependencies": {
     "prettier": "^1.9.2"
+  },
+  "peerDependencies": {
+    "typescript": ">=1.8.10"
   }
 }
