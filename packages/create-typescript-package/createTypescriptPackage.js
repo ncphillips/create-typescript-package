@@ -217,13 +217,16 @@ function shouldUseYarn() {
   }
 }
 
-function install(root, useYarn, dependencies, verbose, isOnline) {
+function install(root, useYarn, dependencies, verbose, isOnline, isDevDeps) {
   return new Promise((resolve, reject) => {
     let command
     let args
     if (useYarn) {
       command = "yarnpkg"
       args = ["add", "--exact"]
+      if (isDevDeps) {
+        args.push("--dev")
+      }
       if (!isOnline) {
         args.push("--offline")
       }
@@ -246,7 +249,7 @@ function install(root, useYarn, dependencies, verbose, isOnline) {
       command = "npm"
       args = [
         "install",
-        "--save",
+        `--save${isDevDeps ? "-dev" : ""}`,
         "--save-exact",
         "--loglevel",
         "error",
@@ -280,7 +283,6 @@ function run(
   useYarn
 ) {
   const packageToInstall = getInstallPackage(version)
-  const allDependencies = ["typescript", packageToInstall]
 
   console.log("Installing packages. This might take a couple of minutes.")
   getPackageName(packageToInstall)
@@ -294,14 +296,28 @@ function run(
       const isOnline = info.isOnline
       const packageName = info.packageName
       console.log(
-        `Installing ${chalk.cyan(
-          "typescript"
-        )}, ${chalk.cyan()}, and ${chalk.cyan(packageName)}...`
+        `Installing ${chalk.cyan("typescript")} and ${chalk.cyan(
+          packageName
+        )}...`
       )
       console.log()
 
-      return install(root, useYarn, allDependencies, verbose, isOnline).then(
-        () => packageName
+      return install(
+        root,
+        useYarn,
+        ["typescript"],
+        verbose,
+        isOnline,
+        false
+      ).then(() =>
+        install(
+          root,
+          useYarn,
+          [packageToInstall],
+          verbose,
+          isOnline,
+          true
+        ).then(() => packageName)
       )
     })
     .then(packageName => {
@@ -569,7 +585,7 @@ function setCaretRangeForRuntimeDeps(packageName) {
     process.exit(1)
   }
 
-  const packageVersion = packageJson.dependencies[packageName]
+  const packageVersion = packageJson.devDependencies[packageName]
   if (typeof packageVersion === "undefined") {
     console.error(chalk.red(`Unable to find ${packageName} in package.json`))
     process.exit(1)
