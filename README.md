@@ -2,56 +2,47 @@
 <a href="https://zenhub.com"><img src="https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png"></a>
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
-# type-scripts
+# Create Typescript Package
 
-Scripts to help develop, test, and build Typescript packages.
+Create a new Typescript package with zero build configuration.
 
+## Getting Started
 
-## Tutorial
-
-Here's a quick tutorial on how to build a Typescript package with `type-scripts`.
-
-### Step 1: Initialize the Package
+Install `create-typescript-package`:
 
 ```bash
-mkdir my-cool-pkg
-cd my-cool-pkg
-
-yarn init
+npm install -g create-typescript-package
 ```
 
-### Step 2: Setup `types-scripts`
-
-Install `type-scripts`
+Create your new package
 
 ```bash
-yarn add --dev type-scripts
+create-typescript-package my-pkg
 ```
 
-And then setup your `build` script in the `package.json`.
+A new directory will be created with the following contents:
 
-**package.json**
-```json
-{
-  "scripts": {
-    "build": "type-scripts-build"
-  }
-}
+```
+my-pkg/
+  package.json
+  .gitignore
+  src/
+    index.ts
+    bar.ts
 ```
 
-### Step 3: Add the `index.ts`
+The latest version of `typescript` and `type-scripts` will be installed and added to the `deveDependencies` in your `package.json`.
 
-**src/index.ts**
-```Typescript
-export default function() {
-  console.log("Hello World")
-}
-```
+## Scripts
 
-### Step 4: Build your package
+**Build**
 
 ```bash
-yarn build
+npm run build
 ```
 
-You're package will be output to `build/my-cool-pkg.js`
+The built project will be output to `build/my-pkg.js`.
+
+All `dependencies` will be bundled with your code.
+
+All `peerDependencies` will not be bundled.
