@@ -22,7 +22,6 @@ const inputOptions = {
   external,
   plugins: [
     rollupTypescript({
-      tsconfigOverride: { compilerOptions: { declaration: true } },
       typescript,
     }),
     resolve({
@@ -34,7 +33,7 @@ const inputOptions = {
 }
 
 const outputOptions = {
-  file: `build/${package.name}.js`,
+  file: package.main,
   format: "cjs",
 }
 

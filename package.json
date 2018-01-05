@@ -2,8 +2,7 @@
   "private": true,
   "scripts": {
     "changelog": "lerna-changelog",
-    "create-typescript-package":
-      "node packages/create-typescript-package/index.js",
+    "create-typescript-package": "./tasks/ctp.sh",
     "publish": "lerna publish",
     "postinstall": "lerna bootstrap",
     "next": "lerna publish --npm-tag=next"
