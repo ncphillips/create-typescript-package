@@ -3,7 +3,7 @@
   "scripts": {
     "changelog": "lerna-changelog",
     "create-typescript-package":
-      "node packages/create-typescript-package/index.js my-pkg",
+      "node packages/create-typescript-package/index.js",
     "publish": "lerna publish",
     "postinstall": "lerna bootstrap",
     "next": "lerna publish --npm-tag=next"

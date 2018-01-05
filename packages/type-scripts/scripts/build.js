@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 const path = require("path")
-const rollupTypescript = require("rollup-plugin-typescript")
+const rollupTypescript = require("rollup-plugin-typescript2")
 const rollup = require("rollup")
 const resolve = require("rollup-plugin-node-resolve")
 
@@ -22,6 +22,7 @@ const inputOptions = {
   external,
   plugins: [
     rollupTypescript({
+      tsconfigOverride: { compilerOptions: { declaration: true } },
       typescript,
     }),
     resolve({

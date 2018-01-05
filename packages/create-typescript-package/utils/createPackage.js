@@ -21,7 +21,8 @@ module.exports = function createPackage(name) {
   const packageJson = {
     name: appName,
     version: "0.1.0",
-    private: true,
+    main: `./build/${appName}.js`,
+    types: `./build/${appName}.d.ts`,
     scripts: {
       build: "type-scripts-build",
     },
