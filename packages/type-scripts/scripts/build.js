@@ -32,9 +32,17 @@ const inputOptions = {
   ],
 }
 
+function snakeToCamel(s) {
+  s[0].toUpperCase()
+  return s.replace(/(\-\w)/g, function(m) {
+    return m[1].toUpperCase()
+  })
+}
+let packageNameParts = package.name.split(".")
 const outputOptions = {
   file: package.main,
-  format: "cjs",
+  name: snakeToCamel(packageNameParts[packageNameParts.length - 1]),
+  format: "umd",
 }
 
 async function build() {
