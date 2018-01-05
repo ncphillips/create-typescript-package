@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "changelog": "lerna-changelog"
+    "changelog": "lerna-changelog",
+    "ctp": "node packages/create-typescript-package/index.js"
   },
   "devDependencies": {
     "lerna-changelog": "^0.7.0",

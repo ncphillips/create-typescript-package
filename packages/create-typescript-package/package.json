@@ -1,0 +1,25 @@
+{
+  "name": "create-typescript-package",
+  "version": "0.0.0",
+  "description": "Create a Typescript package with zero build scripts!",
+  "bin": {
+    "create-typescript-package": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncphillips/create-typescript-package.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Nolan Phillips <ncphillips.19@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ncphillips/create-typescript-package/issues"
+  },
+  "homepage": "https://github.com/ncphillips/create-typescript-package#readme",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.12.2"
+  }
+}

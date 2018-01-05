@@ -1,8 +1,6 @@
 {
   "lerna": "2.5.1",
-  "packages": [
-    "packages/type-scripts"
-  ],
+  "packages": ["packages/create-typescript-package", "packages/type-scripts"],
   "version": "0.1.1-0",
   "changelog": {
     "repo": "ncphillips/create-typescript-package",
@@ -14,5 +12,6 @@
       "tag: documentation": ":memo: Documentation"
     },
     "cacheDir": ".changelog"
-  }
+  },
+  "npmClient": "yarn"
 }
