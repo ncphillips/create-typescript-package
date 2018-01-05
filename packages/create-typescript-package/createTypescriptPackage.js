@@ -217,16 +217,13 @@ function shouldUseYarn() {
   }
 }
 
-function install(root, useYarn, dependencies, verbose, isOnline, isDevDeps) {
+function install(root, useYarn, dependencies, verbose, isOnline) {
   return new Promise((resolve, reject) => {
     let command
     let args
     if (useYarn) {
       command = "yarnpkg"
-      args = ["add", "--exact"]
-      if (isDevDeps) {
-        args.push("--dev")
-      }
+      args = ["add", "--dev", "--exact"]
       if (!isOnline) {
         args.push("--offline")
       }
@@ -249,7 +246,7 @@ function install(root, useYarn, dependencies, verbose, isOnline, isDevDeps) {
       command = "npm"
       args = [
         "install",
-        `--save${isDevDeps ? "-dev" : ""}`,
+        `--save-dev`,
         "--save-exact",
         "--loglevel",
         "error",
@@ -301,24 +298,15 @@ function run(
         )}...`
       )
       console.log()
-
+      const devDependencies = ["typescript", packageToInstall]
       return install(
         root,
         useYarn,
-        ["typescript"],
+        devDependencies,
         verbose,
         isOnline,
-        false
-      ).then(() =>
-        install(
-          root,
-          useYarn,
-          [packageToInstall],
-          verbose,
-          isOnline,
-          true
-        ).then(() => packageName)
-      )
+        true
+      ).then(() => packageName)
     })
     .then(packageName => {
       checkNodeVersion(packageName)
@@ -580,8 +568,8 @@ function setCaretRangeForRuntimeDeps(packageName) {
   const packagePath = path.join(process.cwd(), "package.json")
   const packageJson = require(packagePath)
 
-  if (typeof packageJson.dependencies === "undefined") {
-    console.error(chalk.red("Missing dependencies in package.json"))
+  if (typeof packageJson.devDependencies === "undefined") {
+    console.error(chalk.red("Missing devDependencies in package.json"))
     process.exit(1)
   }
 
@@ -591,7 +579,7 @@ function setCaretRangeForRuntimeDeps(packageName) {
     process.exit(1)
   }
 
-  makeCaretRange(packageJson.dependencies, "typescript")
+  makeCaretRange(packageJson.devDependencies, "typescript")
 
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2))
 }
