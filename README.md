@@ -46,3 +46,7 @@ The built project will be output to `build/my-pkg.js`.
 All `dependencies` will be bundled with your code.
 
 All `peerDependencies` will not be bundled.
+
+## Some Thanks
+
+This project is greatly inspired by the wonderful [create-react-app](https://github.com/facebookincubator/create-react-app/) project.

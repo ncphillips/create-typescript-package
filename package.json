@@ -2,7 +2,11 @@
   "private": true,
   "scripts": {
     "changelog": "lerna-changelog",
-    "create": "node packages/create-typescript-package/index.js my-pkg"
+    "create-typescript-package":
+      "node packages/create-typescript-package/index.js my-pkg",
+    "publish": "lerna publish",
+    "postinstall": "lerna bootstrap",
+    "next": "lerna publish --npm-tag=next"
   },
   "devDependencies": {
     "lerna": "^2.5.1",
