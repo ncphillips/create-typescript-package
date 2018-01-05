@@ -20,6 +20,8 @@
   "homepage": "https://github.com/ncphillips/create-typescript-package#readme",
   "dependencies": {
     "chalk": "^2.3.0",
-    "commander": "^2.12.2"
+    "commander": "^2.12.2",
+    "cross-spawn": "^5.1.0",
+    "fs-extra": "^5.0.0"
   }
 }

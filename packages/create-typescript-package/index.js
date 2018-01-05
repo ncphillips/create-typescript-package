@@ -1,7 +1,9 @@
 const chalk = require("chalk")
 const commander = require("commander")
 const path = require("path")
+
 const packageJson = require(path.resolve(__dirname, "package.json"))
+const createPackage = require("./utils/createPackage")
 
 let projectName
 
@@ -26,3 +28,5 @@ if (typeof projectName === "undefined") {
   )
   process.exit(1)
 }
+
+createPackage(projectName)

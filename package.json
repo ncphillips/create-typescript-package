@@ -2,11 +2,11 @@
   "private": true,
   "scripts": {
     "changelog": "lerna-changelog",
-    "ctp": "node packages/create-typescript-package/index.js"
+    "create": "node packages/create-typescript-package/index.js my-pkg"
   },
   "devDependencies": {
-    "lerna-changelog": "^0.7.0",
     "lerna": "^2.5.1",
+    "lerna-changelog": "^0.7.0",
     "prettier": "^1.9.2"
   }
 }
