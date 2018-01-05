@@ -1,12 +1,18 @@
 {
   "name": "type-scripts",
-  "description":
-    "Develop, test, and build Typescript packages with zero configuration.",
+  "description": "Develop, test, and build Typescript packages with zero configuration.",
   "author": "Nolan Phillips <ncphillips.19@gmail.com>",
+  "repository": "ncphillips/create-typescript-package",
   "license": "MIT",
   "bin": {
     "type-scripts-build": "scripts/build.js"
   },
+  "bugs": {
+    "url": "https://github.com/ncphillips/create-typescript-package/issues"
+  },
+  "files": [
+    "scripts"
+  ],
   "dependencies": {
     "rollup": "^0.53.3",
     "rollup-plugin-node-resolve": "^3.0.0",
@@ -14,5 +20,6 @@
   },
   "peerDependencies": {
     "typescript": ">=1.8.10"
-  }
+  },
+  "version": "0.1.0-0"
 }
