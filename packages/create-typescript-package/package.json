@@ -1,6 +1,6 @@
 {
   "name": "create-typescript-package",
-  "version": "0.2.1-2",
+  "version": "0.2.1-3",
   "description": "Create a Typescript package with zero build scripts!",
   "bin": {
     "create-typescript-package": "./index.js"

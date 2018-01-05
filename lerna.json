@@ -4,7 +4,7 @@
     "packages/create-typescript-package",
     "packages/type-scripts"
   ],
-  "version": "0.2.1-2",
+  "version": "0.2.1-3",
   "changelog": {
     "repo": "ncphillips/create-typescript-package",
     "labels": {
