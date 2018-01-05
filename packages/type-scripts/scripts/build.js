@@ -22,7 +22,6 @@ const inputOptions = {
   external,
   plugins: [
     rollupTypescript({
-      tsconfigOverride: { compilerOptions: { declaration: true } },
       typescript,
     }),
     resolve({
