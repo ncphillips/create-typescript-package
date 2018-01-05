@@ -38,6 +38,7 @@ module.exports = function(
   // Setup the script rules
   appPackage.scripts = {
     build: "type-scripts-build",
+    prepublish: `${useYarn ? "yarn " : "npm run"} build`,
   }
 
   fs.writeFileSync(
