@@ -1,7 +1,10 @@
 {
   "lerna": "2.5.1",
-  "packages": ["packages/create-typescript-package", "packages/type-scripts"],
-  "version": "0.1.1-0",
+  "packages": [
+    "packages/create-typescript-package",
+    "packages/type-scripts"
+  ],
+  "version": "0.2.0-0",
   "changelog": {
     "repo": "ncphillips/create-typescript-package",
     "labels": {
