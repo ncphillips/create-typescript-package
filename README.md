@@ -47,6 +47,14 @@ All `dependencies` will be bundled with your code.
 
 All `peerDependencies` will not be bundled.
 
+**Publish**
+
+```bash
+npm publish
+```
+
+Doing so will build the package and publish it to NPM. 
+
 ## Some Thanks
 
 This project is greatly inspired by the wonderful [create-react-app](https://github.com/facebookincubator/create-react-app/) project.
