@@ -1,0 +1,16 @@
+{
+  "lerna": "2.5.1",
+  "packages": ["packages/type-scripts"],
+  "version": "0.0.0",
+  "changelog": {
+    "repo": "ncphillips/create-typescript-package",
+    "labels": {
+      "tag: new feature": ":rocket: New Feature",
+      "tag: breaking change": ":boom: Breaking Change",
+      "tag: bug fix": ":bug: Bug Fix",
+      "tag: enhancement": ":nail_care: Enhancement",
+      "tag: documentation": ":memo: Documentation"
+    },
+    "cacheDir": ".changelog"
+  }
+}
