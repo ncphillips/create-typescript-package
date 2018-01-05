@@ -3,6 +3,7 @@
   "scripts": {
     "changelog": "lerna-changelog",
     "create-typescript-package": "./tasks/ctp.sh",
+    "install-create-typescript-package": "./tasks/install-ctp.sh",
     "publish": "lerna publish",
     "postinstall": "lerna bootstrap",
     "next": "lerna publish --npm-tag=next"
