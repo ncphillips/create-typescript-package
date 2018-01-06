@@ -16,13 +16,13 @@ Todo: Provide a clearer vision for the project.
 
 Good pull requests, such as patches, improvements, and new features, are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.
 
-Please ask first if somebody else is already working on this or the core developers think your feature is in-scope for Create React App. Generally always have a related issue with discussions for whatever you are including.
+Please ask first if somebody else is already working on this or the core developers think your feature is in-scope for Create TypeScript Package. Generally always have a related issue with discussions for whatever you are including.
 
 Please also provide a test plan, i.e. specify how you verified that your addition works.
 
-## Folder Structure of Create React App
+## Folder Structure of Create TypeScript Package
 `create-typescript-package` is a monorepo, meaning it is divided into independent sub-packages.<br>
-These packages can be found in the [`packages/`](https://github.com/facebookincubator/create-typescript-package/tree/master/packages) directory.
+These packages can be found in the [`packages/`](https://github.com/ncphillips/create-typescript-package/tree/master/packages) directory.
 
 ### Overview of directory structure
 ```
@@ -33,7 +33,7 @@ packages/
 ### Package Descriptions
 #### [create-typescript-package](https://github.com/ncphillips/create-typescript-package/tree/master/packages/create-typescript-package)
 The global CLI command code can be found in this directory, and shouldn't often be changed. It should run on Node 0.10+.
-#### [react-scripts](https://github.com/ncphillips/create-typescript-package/tree/master/packages/react-scripts)
+#### [type-scripts](https://github.com/ncphillips/create-typescript-package/tree/master/packages/type-scripts)
 This package is the heart of the project, which contains the scripts for setting up the development server, building production builds, configuring all software used, etc.<br>
 
 ## Setting Up a Local Copy
