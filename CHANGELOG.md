@@ -1,3 +1,19 @@
+## 1.1.3 (2018-01-09)
+
+#### :bug: Bug Fix
+* `create-typescript-package`, `type-scripts`
+  * [#21](https://github.com/ncphillips/create-typescript-package/pull/21) 16 catch and log errors. ([@ncphillips](https://github.com/ncphillips))
+
+#### :nail_care: Enhancement
+* `type-scripts`
+  * [#22](https://github.com/ncphillips/create-typescript-package/pull/22) allow for import of commonjs modules. ([@ncphillips](https://github.com/ncphillips))
+
+#### :memo: Documentation
+* [#15](https://github.com/ncphillips/create-typescript-package/pull/15) Update contributing.md to point to correct repo. ([@gauthierm](https://github.com/gauthierm))
+
+#### Committers: 2
+- Michael Gauthier ([gauthierm](https://github.com/gauthierm))
+- NCPhillips ([ncphillips](https://github.com/ncphillips))
 ## 1.1.2 (2018-01-05)
 
 #### :nail_care: Enhancement
