@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+const chalk = require("chalk")
 const path = require("path")
 const rollupTypescript = require("rollup-plugin-typescript2")
 const rollup = require("rollup")
@@ -48,8 +49,20 @@ async function build() {
   await bundle.write(outputOptions)
 }
 
-try {
-  build()
-} catch (e) {
-  console.error("Failed to build Typescript project", e)
-}
+build().catch(e => {
+  console.log(chalk.red("Build Failed"))
+  console.log()
+  console.log(
+    chalk.red(
+      "If you cannot figure out what's causing this failure please create a new issue in Github:"
+    )
+  )
+  console.log()
+  console.log(
+    `\t${chalk.cyan(
+      "https://github.com/ncphillips/create-typescript-package/issues/new"
+    )}`
+  )
+  console.log()
+  console.error(e)
+})

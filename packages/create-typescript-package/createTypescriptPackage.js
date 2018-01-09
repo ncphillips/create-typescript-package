@@ -97,7 +97,7 @@ const program = new commander.Command(packageJson.name)
     )
     console.log(
       `      ${chalk.cyan(
-        "https://github.com/facebookincubator/create-typescript-package/issues/new"
+        "https://github.com/ncphillips/create-typescript-package/issues/new"
       )}`
     )
     console.log()
