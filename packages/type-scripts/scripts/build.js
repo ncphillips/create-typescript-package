@@ -4,6 +4,7 @@ const path = require("path")
 const rollupTypescript = require("rollup-plugin-typescript2")
 const rollup = require("rollup")
 const resolve = require("rollup-plugin-node-resolve")
+const commonJs = require("rollup-plugin-commonjs")
 
 const PROJECT = "../../../"
 const NODE_MODULES = "../../"
@@ -29,6 +30,9 @@ const inputOptions = {
       customResolveOptions: {
         moduleDirectory: path.resolve(__dirname, NODE_MODULES),
       },
+    }),
+    commonJs({
+      sourceMap: true,
     }),
   ],
 }
