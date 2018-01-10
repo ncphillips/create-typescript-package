@@ -1,4 +1,13 @@
-## 1.1.3 (2018-01-09)
+## (2018-01-10)
+
+#### :nail_care: Enhancement
+* `type-scripts`
+  * [#24](https://github.com/ncphillips/create-typescript-package/pull/24) peerDependencies are properly cherry picked at build time. ([@ncphillips](https://github.com/ncphillips))
+
+#### Committers: 1
+- NCPhillips ([ncphillips](https://github.com/ncphillips))
+
+## (2018-01-09)
 
 #### :bug: Bug Fix
 * `create-typescript-package`, `type-scripts`
@@ -14,7 +23,7 @@
 #### Committers: 2
 - Michael Gauthier ([gauthierm](https://github.com/gauthierm))
 - NCPhillips ([ncphillips](https://github.com/ncphillips))
-## 1.1.2 (2018-01-05)
+## (2018-01-05)
 
 #### :nail_care: Enhancement
 * `type-scripts`
@@ -24,7 +33,7 @@
 - NCPhillips ([ncphillips](https://github.com/ncphillips))
 
 
-## 1.1.1 (2018-01-05)
+## (2018-01-05)
 
 #### :nail_care: Enhancement
 * `type-scripts`
