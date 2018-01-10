@@ -10,14 +10,19 @@ const PROJECT = "../../../"
 const NODE_MODULES = "../../"
 
 const package = require(path.resolve(__dirname, PROJECT, "package.json"))
-const external = Object.keys(package.peerDependencies || {})
+const externalKeys = Object.keys(package.peerDependencies || {})
+const external = targetId => {
+  return !!externalKeys.find(extId => {
+    return new RegExp(extId).test(targetId)
+  })
+}
 
 const typescript = require(path.resolve(__dirname, NODE_MODULES, "typescript"))
 
 console.log("Creact Typescript Package – Build")
 console.log("\tTypescript Version: ", typescript.version)
 console.log("\tPackage Name: ", package.name)
-console.log("\tExternal Dependencies: ", external)
+console.log("\tExternal Dependencies: ", externalKeys)
 
 const inputOptions = {
   input: "src/index.ts",
