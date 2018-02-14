@@ -5,6 +5,8 @@ const rollupTypescript = require("rollup-plugin-typescript2")
 const rollup = require("rollup")
 const resolve = require("rollup-plugin-node-resolve")
 const commonJs = require("rollup-plugin-commonjs")
+const postcss = require("rollup-plugin-postcss")
+const autoprefixer = require("autoprefixer")
 
 const PROJECT = "../../../"
 const NODE_MODULES = "../../"
@@ -28,6 +30,10 @@ const inputOptions = {
   input: "src/index.ts",
   external,
   plugins: [
+    postcss({
+      extract: true,
+      plugins: [autoprefixer],
+    }),
     rollupTypescript({
       typescript,
     }),
