@@ -7,7 +7,7 @@ const resolve = require("rollup-plugin-node-resolve")
 const commonJs = require("rollup-plugin-commonjs")
 const postcss = require("rollup-plugin-postcss")
 const autoprefixer = require("autoprefixer")
-const less = require("rollup-plugin-less")
+const less = require("rollup-plugin-less") //support less
 
 const PROJECT = "../../../"
 const NODE_MODULES = "../../"
@@ -31,7 +31,7 @@ const inputOptions = {
   input: "src/index.ts",
   external,
   plugins: [
-    less(),
+    less(), //support less
     postcss({
       extract: true,
       plugins: [autoprefixer],
