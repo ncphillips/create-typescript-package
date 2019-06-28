@@ -1,3 +1,12 @@
+## (2019-06-128)
+
+#### :nail_care: Enhancement
+* `type-scripts`
+  * [#27](https://github.com/ncphillips/create-typescript-package/pull/27) update `rollup` dependencies ([@ncphillips](https://github.com/ncphillips))
+
+#### Committers: 1
+- NCPhillips ([ncphillips](https://github.com/ncphillips))
+
 ## (2018-01-10)
 
 #### :nail_care: Enhancement
