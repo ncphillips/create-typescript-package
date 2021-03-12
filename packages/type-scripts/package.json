@@ -17,7 +17,7 @@
   "dependencies": {
     "autoprefixer": "^9.6.0",
     "chalk": "^2.4.1",
-    "react-dev-utils": "^9.0.1",
+    "react-dev-utils": "^11.0.4",
     "rollup": "^1.16.2",
     "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-node-resolve": "^5.1.0",
